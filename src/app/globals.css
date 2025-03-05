@@ -128,3 +128,7 @@
 .gradient {
   @apply bg-gradient-to-br from-yellow-400 to-fuchsia-400;
 }
+
+.text-gradient {
+  @apply bg-gradient-to-br from-yellow-400 to-fuchsia-400 bg-clip-text text-transparent;
+}

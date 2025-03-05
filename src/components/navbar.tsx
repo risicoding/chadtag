@@ -1,16 +1,13 @@
-import { Button } from "@/components/ui/button";
-import GardientButton from "./gradient-border-button";
+import { Button } from '@/components/ui/button';
+import GardientButton from './gradient-border-button';
 const Navbar = () => {
   return (
-    <nav
-      className="flex items-center justify-between gap-3 px-6 py-2 sm:w-4/5 mx-auto
-      border rounded-full"
-    >
+    <nav className="mx-auto flex max-w-4xl items-center justify-between gap-3 border px-6 py-2 sm:rounded-full">
       {/* Logo */}
       <div className="text-xl font-bold">Chadtag</div>
 
       {/* Navigation Links */}
-      <ul className="flex gap-6 text-neutral-600">
+      <ul className="hidden gap-6 text-neutral-600 sm:flex">
         <li>
           <a href="#" className="hover:underline">
             Courses
