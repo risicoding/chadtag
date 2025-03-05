@@ -16,7 +16,7 @@ const Transformations = () => {
       <Button variant="outline" className="text-lg font-bold">
         Real world transformations
       </Button>
-      <Carousel className="w-full max-w-sm object-cover sm:max-w-md">
+      <Carousel className="w-full max-w-xs sm:max-w-md">
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
@@ -25,7 +25,7 @@ const Transformations = () => {
                   <CardContent className="flex items-center justify-center object-cover p-0">
                     <Image
                       src={`/transformations/${index + 1}.jpeg`}
-                      width={400}
+                      width={500}
                       height={100}
                       alt={`Chadmax-transformations-${index + 1}`}
                     />
@@ -38,12 +38,6 @@ const Transformations = () => {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-      <div className="min-h-screen" />
-      <div className="min-h-screen" />
-      <div className="min-h-screen" />
-      <div className="min-h-screen" />
-      <div className="min-h-screen" />
-      <div className="min-h-screen" />
     </section>
   );
 };
