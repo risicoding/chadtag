@@ -6,10 +6,11 @@ import { Features } from '@/sections/features';
 import Transformations from '@/sections/transformations';
 import Testimonials from '@/sections/testimonials';
 import Cta from '@/sections/cta';
+import Footer from '@/sections/footer';
 
 const Page = () => {
   return (
-    <div className="space-y-12 max-w-4xl mx-auto sm:space-y-28">
+    <div className="mx-auto max-w-4xl space-y-12 sm:space-y-28">
       <Hero />
       <Image
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgeWAmVRnefTXOCu-Y0rdFt5tcypyR9bpXL5Z0t2cAAUXadjaDRZ-ZiA1H&s=10"
@@ -23,6 +24,7 @@ const Page = () => {
       <Transformations />
       <Testimonials />
       <Cta />
+      <Footer />
     </div>
   );
 };

@@ -7,6 +7,8 @@ import {
   FaComments,
   FaShoppingCart,
 } from 'react-icons/fa';
+import { FaCircleDot } from 'react-icons/fa6';
+
 import { MdFaceRetouchingNatural } from 'react-icons/md';
 
 import { GiComb, GiHealthNormal } from 'react-icons/gi';
@@ -69,7 +71,10 @@ const FeatureCard = ({
       </div>
       <div className="px-10">
         {items.map((item, index) => (
-          <div key={index}>{item}</div>
+          <div key={index} className='flex gap-2'>
+            <FaCircleDot className='size-2' />
+            {item}
+          </div>
         ))}
       </div>
     </div>

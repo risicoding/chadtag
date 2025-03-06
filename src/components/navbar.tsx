@@ -5,51 +5,60 @@ import { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoCloseOutline } from 'react-icons/io5';
 
-const exo = Exo_2({});
+const exo = Exo_2({ subsets: ['latin'] });
+
+const NavLinks = ({ className }: { className?: string }) => (
+  <ul className={className}>
+    <li>
+      <a href="#" className="hover:text-neutral-900 hover:underline">
+        Courses
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-neutral-900 hover:underline">
+        Blogs
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-neutral-900 hover:underline">
+        About
+      </a>
+    </li>
+  </ul>
+);
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="fixed z-50 w-full">
-      <nav className="relative z-50 mx-auto flex max-w-4xl items-center justify-between gap-3 rounded-none border bg-neutral-300/25 px-6 py-2 backdrop-blur-md sm:rounded-full">
+      <nav className="relative z-50 mx-auto flex max-w-4xl items-center justify-between gap-3 rounded-none border bg-neutral-100/30 px-6 py-3 backdrop-blur-md sm:rounded-full">
         {/* Logo */}
-        <div className={`text-xl font-bold ${exo.className}`}>Chadmax</div>
+        <div className={`text-xl font-bold text-neutral-900 ${exo.className}`}>
+          Chadmax
+        </div>
 
         {/* Navigation Links */}
-        <ul className="hidden gap-6 text-neutral-600 sm:flex">
-          <li>
-            <a href="#" className="hover:underline">
-              Courses
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">
-              Blogs
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">
-              About
-            </a>
-          </li>
-        </ul>
+        <NavLinks className="hidden gap-6 text-neutral-900 sm:flex" />
 
         {/* Buy Now Button */}
         <div className="flex items-center gap-4">
-          <GradientButton>Buy now</GradientButton>
-          <div className="flex sm:hidden">
+          <GradientButton>Explore courses</GradientButton>
+
+          {/* Hamburger Menu */}
+          <div className="relative flex sm:hidden">
             <div
-              className="aspect-square rounded-md border border-neutral-500 p-2"
-              onClick={() => {
-                setIsOpen((prev) => !prev);
-                console.log('hello')
-              }}
+              className="aspect-square cursor-pointer rounded-md border border-neutral-500 p-2 transition-all duration-300"
+              onClick={() => setIsOpen((prev) => !prev)}
             >
               {isOpen ? <IoCloseOutline /> : <RxHamburgerMenu />}
             </div>
           </div>
         </div>
       </nav>
+      {isOpen && (
+        <NavLinks className="absolute top-16 right-0 z-40 w-1/4 bg-neutral-100/80 px-4 py-6 backdrop-blur-md" />
+      )}
     </div>
   );
 };
