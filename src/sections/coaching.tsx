@@ -72,13 +72,13 @@ export function Coaching() {
 }
 
 const Icons = {
-  discord: () => <FaDiscord className="text-purple-400" />,
+  discord: () => <FaDiscord className="text-indigo-500" />,
   user: () => (
     <svg
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
+      fill="oklch(0.585 0.233 277.117)"
       stroke="#000000"
       strokeWidth="2"
       xmlns="http://www.w3.org/2000/svg"

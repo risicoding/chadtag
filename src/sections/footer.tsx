@@ -8,11 +8,13 @@ import { IoMdCall } from 'react-icons/io';
 import { IoIosHome } from 'react-icons/io';
 const Footer = () => {
   return (
-    <footer className=" py-12 min-h-[calc(100vh-400px)] space-y-6 px-6">
+    <footer className="min-h-[calc(100vh-400px)] space-y-6 px-6 py-12">
       <div>
-        <h2 className='text-4xl bg-gradient-to-b from-neutral-300 via-neutral-500 to-neutral-700 bg-clip-text text-transparent font-bold'>Chadtag</h2>
+        <h2 className="bg-gradient-to-b from-neutral-300 via-neutral-500 to-neutral-700 bg-clip-text text-4xl font-bold text-transparent">
+          Chadtag
+        </h2>
       </div>
-      <div className="flex flex-col gap-6 sm:flex-row text-neutral-300">
+      <div className="flex flex-col gap-6 text-neutral-300 sm:flex-row">
         <ul>
           <li className="flex items-center gap-2">
             <IoIosHome />
@@ -28,14 +30,18 @@ const Footer = () => {
           </li>
         </ul>
         <ul className="space-y-1">
-          <li className="flex items-center gap-2">
-            <AiFillYoutube />
-            @chadtag
-          </li>
-          <li className="flex items-center gap-2">
-            <AiFillInstagram />
-            @chadtagyt
-          </li>
+          <a href="https://www.youtube.com/@chadtag">
+            <li className="flex items-center gap-2">
+              <AiFillYoutube />
+              @chadtag
+            </li>
+          </a>
+          <a href="https://www.instagram.com/chadtagyt/?hl=en">
+            <li className="flex items-center gap-2">
+              <AiFillInstagram />
+              @chadtagyt
+            </li>
+          </a>
           <li className="flex items-center gap-2">
             <IoMdMail />
             chadtag4404@gmail.com

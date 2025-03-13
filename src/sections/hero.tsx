@@ -6,10 +6,21 @@ import { GradientButton } from '@/components/gradient-border-button';
 import { cn } from '@/lib/utils';
 import { AnimatedGridPattern } from '@/components/magicui/animate-grid-pattern';
 import ImageGlow from '@/components/image-glow';
+import { Spotlight } from '@/components/aceternity/spotlight';
 
 export function Hero() {
   return (
-    <div className="flex min-h-[calc(100vh-140px)] flex-col items-center justify-center gap-3 bg-black px-8 sm:items-center">
+    <div className="flex z-30 min-h-[calc(100vh-100px)] flex-col items-center justify-center gap-3 bg-black px-8 sm:items-center">
+      <AnimatedGridPattern
+        numSquares={30}
+        maxOpacity={0.1}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]',
+          'inset-x-[-10%] z-50 inset-y-[-35%] h-[200%] skew-y-12',
+        )}
+      />
       <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-around sm:text-start">
         <div className="flex flex-col items-end gap-4">
           <h1 className="relative z-20 mx-auto mt-6 max-w-7xl bg-gradient-to-b from-neutral-200 via-neutral-400 to-neutral-700 bg-clip-text py-6 text-4xl font-semibold text-transparent sm:text-5xl md:text-4xl lg:text-6xl">
