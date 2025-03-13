@@ -32,18 +32,18 @@ const Navbar = () => {
 
   return (
     <div className="fixed z-50 w-full">
-      <nav className="relative z-50 mx-auto flex max-w-4xl items-center justify-between gap-3 rounded-none border bg-neutral-100/30 px-6 py-3 backdrop-blur-md sm:rounded-full">
+      <nav className="relative z-50 mx-auto border border-neutral-800 flex max-w-4xl items-center justify-between gap-3 rounded-none  text-white px-6 py-3 backdrop-blur-md sm:rounded-full">
         {/* Logo */}
-        <div className={`text-xl font-bold text-neutral-900 ${exo.className}`}>
+        <div className={`text-xl font-bold text-white mix-blend-exclusion ${exo.className}`}>
           Chadmax
         </div>
 
         {/* Navigation Links */}
-        <NavLinks className="hidden gap-6 text-neutral-900 sm:flex" />
+        <NavLinks className="hidden gap-6 text-neutral-100 sm:flex" />
 
         {/* Buy Now Button */}
         <div className="flex items-center gap-4">
-          <GradientButton>Explore courses</GradientButton>
+          <GradientButton className='hidden sm:flex'>Explore courses</GradientButton>
 
           {/* Hamburger Menu */}
           <div className="relative flex sm:hidden">
@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
       </nav>
       {isOpen && (
-        <NavLinks className="absolute top-16 right-0 z-40 w-1/4 bg-neutral-100/80 px-4 py-6 backdrop-blur-md" />
+        <NavLinks className="sm:hidden flex absolute top-16 right-0 z-40 w-1/4 flex-col px-4 py-6 backdrop-blur-md" />
       )}
     </div>
   );

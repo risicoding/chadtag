@@ -29,14 +29,14 @@ export const GradientButton = React.forwardRef<
       <Comp
         ref={ref}
         className={cn(
-          'gradient group inline-flex items-center justify-center rounded-full p-[2px]',
+          'gradient z-50 group inline-flex items-center justify-center rounded-full p-[2px]',
           className,
         )}
         {...props}
       >
         <div
           className={cn(
-            'rounded-full bg-white group-hover:bg-transparent',
+            'rounded-full bg-black text-white',
             sizeClasses[size],
             innerClassname,
           )}
