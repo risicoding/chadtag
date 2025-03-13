@@ -7,6 +7,7 @@ import Transformations from '@/sections/transformations';
 import Testimonials from '@/sections/testimonials';
 import Cta from '@/sections/cta';
 import Footer from '@/sections/footer';
+import { Coaching } from '@/sections/coaching';
 
 const Page = () => {
   return (
@@ -21,6 +22,7 @@ const Page = () => {
       />
       <DemoVideo />
       <Features />
+      <Coaching />
       <Transformations />
       <Testimonials />
       <Cta />

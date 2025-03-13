@@ -4,11 +4,12 @@ import { Exo_2 } from 'next/font/google';
 import { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoCloseOutline } from 'react-icons/io5';
+import { cn } from '@/lib/utils';
 
 const exo = Exo_2({ subsets: ['latin'] });
 
 const NavLinks = ({ className }: { className?: string }) => (
-  <ul className={className}>
+  <ul className={cn('text-sm',className)}>
     <li>
       <a href="#" className="hover:text-neutral-900 hover:underline">
         Courses

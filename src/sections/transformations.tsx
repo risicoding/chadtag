@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -9,6 +10,7 @@ import {
 } from '@/components/ui/carousel';
 import Image from 'next/image';
 import React from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Transformations = () => {
   return (
@@ -16,9 +18,13 @@ const Transformations = () => {
       <Button variant="outline" className="text-lg font-bold">
         Real world transformations
       </Button>
-      <Carousel className="w-full max-w-xs sm:max-w-md">
+      <Carousel
+        className="w-full max-w-xs sm:max-w-md"
+        plugins={[Autoplay({ delay: 2000 })]}
+        opts={{ align: 'start', loop: true }}
+      >
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {Array.from({ length: 8 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
                 <Card className="overflow-clip p-0">
