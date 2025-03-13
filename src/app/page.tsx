@@ -14,7 +14,7 @@ const Page = () => {
     <div className="mx-auto max-w-4xl space-y-12 sm:space-y-28">
       <Hero />
       <Image
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgeWAmVRnefTXOCu-Y0rdFt5tcypyR9bpXL5Z0t2cAAUXadjaDRZ-ZiA1H&s=10"
+        src='/book-mockup.jpg'
         className="relative top-0 flex sm:hidden"
         width={750}
         height={700}
